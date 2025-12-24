@@ -1,0 +1,33 @@
+<ion-content class="ion-padding">
+  <!-- Bouton retour flottant -->
+  <ion-buttons slot="fixed" style="top: 10px; left: 10px;">
+    <ion-back-button defaultHref="/home" text="" color="dark"></ion-back-button>
+  </ion-buttons>
+
+  <!-- Zone de photo cliquable -->
+  <div class="photo-uploader" (click)="fileInput.click()" 
+     [style.backgroundImage]="recipe.photoBase64 ? 'url(' + recipe.photoBase64 + ')' : ''">
+  <div *ngIf="!recipe.photoBase64" class="placeholder">
+    <ion-icon name="camera-outline"></ion-icon>
+    <p>Ajouter une photo culinaire</p>
+  </div>
+  <input type="file" #fileInput (change)="uploadPhoto($event)" hidden accept="image/*">
+</div>
+
+  <div class="ion-margin-top">
+    <ion-label class="custom-label">NOM DE LA RECETTE</ion-label>
+    <ion-item lines="none" class="custom-input-field">
+      <ion-input [(ngModel)]="recipe.title" placeholder="Ex: Lasagnes à la Bolognaise"></ion-input>
+    </ion-item>
+
+    <ion-label class="custom-label ion-margin-top">INGRÉDIENTS & ÉTAPES</ion-label>
+    <ion-item lines="none" class="custom-input-field">
+      <ion-textarea [(ngModel)]="recipe.ingredients" rows="8" placeholder="Listez vos secrets ici..."></ion-textarea>
+    </ion-item>
+  </div>
+
+  <ion-button expand="block" shape="round" (click)="save()" class="ion-margin-top save-btn">
+    <ion-icon name="checkmark-done-outline" slot="start"></ion-icon>
+    {{ recipeId ? 'Mettre à jour' : 'Publier la recette' }}
+  </ion-button>
+</ion-content>

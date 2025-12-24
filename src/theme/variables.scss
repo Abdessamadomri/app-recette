@@ -1,0 +1,27 @@
+:root {
+  /* Couleurs principales - Thème "Fresh Kitchen" */
+  --ion-color-primary: #2e7d32; /* Vert foncé pro */
+  --ion-color-primary-rgb: 46, 125, 50;
+  --ion-color-primary-contrast: #ffffff;
+  
+  --ion-color-secondary: #ffa000; /* Orange pour les touches d'accent (boutons secondaires) */
+  
+  /* Fond de l'application */
+  --ion-background-color: #f8faf8; 
+  
+  /* Style global des cartes */
+  --ion-card-background: #ffffff;
+}
+
+/* On arrondit tout pour un look moderne */
+ion-card {
+  border-radius: 20px !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05) !important;
+  border: none !important;
+}
+
+ion-button {
+  --border-radius: 12px !important;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
