@@ -5,7 +5,7 @@ Application web de recettes développée avec Angular + Ionic.
 ## 🎥 Démo vidéo
 
 🎬 **Regarde la démonstration ici :**  
-👉 https://drive.google.com/file/d/1t8pTkQ-8Vz_5sLCnB1etQ0oLHxLPFRTA/view?usp=drive_link
+👉https://drive.google.com/file/d/1t8pTkQ-8Vz_5sLCnB1etQ0oLHxLPFRTA/view?usp=sharing
 
 ---
 
